@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 function NavBar() {
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(true)
   function handleClick () {
     setNav(!nav)
   }
@@ -24,7 +24,7 @@ function NavBar() {
               <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
               <button className='px-8 py-3'>Sign Up</button>
             </div>
-            <div className='md:hidden' onClick={handleClick}>
+            <div className='md:hidden mr-4' onClick={handleClick}>
               {nav? <MenuIcon className='w-5'/> : <XIcon className='w-5'/>}
               
             </div>
